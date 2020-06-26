@@ -1,0 +1,4 @@
+{
+    "db": "mongodb://localhost/e-market",
+    "port": "3700"
+}
