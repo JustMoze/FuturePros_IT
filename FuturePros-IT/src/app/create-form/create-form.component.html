@@ -1,0 +1,45 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="container-fluid form-container">
+        <div class="form-group">
+            <label for="plateNumber" class="label-title">Car's plate number:</label>
+            <input 
+            type="text"
+            class="form-control"
+            id="plateNumber"
+            minlength="7 "
+            required
+            [(ngModel)]="data.number"
+            (change)="log(name)"
+            name="plateNumber"
+            #name="ngModel">
+        </div>
+        <div [hidden]="name.touched && name.valid || name.untouched " class="alert alert-danger">
+            <div *ngIf="name.errors?.minlength">
+                Number must be at least 7 characters long.
+            </div>
+            <div [hidden]="name.valid">Plate's number is required</div>         
+        </div>
+        <div class="form-group">
+            <label for="plateOwner" class="label-title">Car's owner:</label>
+            <input 
+            id="plateOwner"
+            type="text"
+            class="form-control"
+            minlength="2"
+            required
+            [(ngModel)]="data.owner"
+            name="plateOwner"
+            #name="ngModel"
+            >
+        </div>
+        <div [hidden]="name.touched && name.valid || name.untouched " class="alert alert-danger">
+            <div *ngIf="name.errors?.minlength">
+                Owner's name must be at least 2 characters long.
+            </div>
+            <div [hidden]="name.valid">Plate's owner is required</div>         
+        </div>
+        <div class="form-group create-button">
+            <button type="submit" class="btn btn-success add-button"><i class="fa fa-plus"></i> Add plate</button>
+        </div>
+    </div>
+</form>

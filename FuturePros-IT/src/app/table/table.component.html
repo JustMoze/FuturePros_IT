@@ -1,6 +1,15 @@
-
-
-
+<div class="container-fluid" [hidden]="!showSnackbar">
+  <div class="snackbar">
+    <h3 class="snackbar-title">Are you really want to delete plate, which id is <span class="id">{{IdToDelete}}</span>? </h3>
+    <hr>
+    <div class="container buttons-container">
+      <div class="row">
+        <div class="col-6"><button class="btn btn-danger " (click)="confirmDelete()">Delete plate!</button></div>
+        <div class="col-6"><button class="btn btn-secondary" (click)="cancelDelete()">Cancel</button></div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container-fluid table-container">
   <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource">
@@ -38,11 +47,11 @@
           <th mat-header-cell *matHeaderCellDef> Delete plate </th>
           <td mat-cell *matCellDef="let element"> 
             <div class="example-button-container">
-              <button mat-fab class="delete-button" aria-label="Example icon button with a delete icon">
+              <button mat-fab class="delete-button" (click)="handleDelete(element._id)" aria-label="Example icon button with a delete icon">
                 <mat-icon>delete</mat-icon>
               </button>
             </div>
-          </td>
+          </td>         
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

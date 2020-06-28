@@ -1,0 +1,35 @@
+.table-container {
+    padding-left: 5%;
+}
+.title {
+    font-size: 3rem;
+    color: #3f72af;
+    font-family: 'Arial, Helvetica, sans-serif';
+    text-align: center;
+    padding: 25px 0px;
+}
+.add-button {
+    cursor: pointer;
+    padding: 2%;
+    margin-right: 15px;
+    border-radius: 25px;
+    background-color: #3f72af;
+    width: 240px
+}
+.add-title {
+    font-size: 2rem;
+    padding-left: 10px;
+    color: #dbe2ef;
+}
+.navbar-add {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+}
+.fixed-btn {
+     display: flex;
+     margin-right: 0px; 
+     margin-left: 0px; 
+     padding-left: 5%;
+     padding-top: 2%;
+}

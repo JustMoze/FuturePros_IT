@@ -22,3 +22,32 @@ table {
   border-width: 2px;
   width: 90%;  
 }
+.snackbar {
+  border: solid black;
+  border-radius: 25px;
+  width: 50%;
+  margin-left: 25%;
+  height: 25%;
+  text-align: center;
+  background-color: #dbe2ef;
+  margin-bottom: 2rem;
+}
+.id {
+  font-weight: bold;
+  font-size: 2rem;
+}
+hr {
+  display: block;
+  border: 0;
+  border-top: 2px solid black;
+  margin: 1em 4em;
+  padding: 0;
+}
+.buttons-container {
+  width: 50%;
+  margin-left: 25%;
+  padding-bottom: 1em;
+}
+.snackbar-title {
+  padding-top: 1em;
+}

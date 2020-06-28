@@ -7,23 +7,31 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TableComponent } from './table/table.component';
+import { CreateFormComponent } from './create-form/create-form.component';
+import { HomeComponent } from './home/home.component';
+import { RefreshComponent } from './refresh/refresh.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    TableComponent
+    TableComponent,
+    CreateFormComponent,
+    HomeComponent,
+    RefreshComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
+    FormsModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatIconModule,
