@@ -1,0 +1,33 @@
+.add-button {
+    padding: 2%;
+    margin-right: 15px;
+    border-radius: 25px;
+    background-color: #3f72af;
+    width: 240px
+}
+.add-title {
+    font-size: 2rem;
+    padding-left: 10px;
+    color: #dbe2ef;
+}
+.navbar {
+    background-color: #112d4e;
+    padding: 5px 30px;
+}
+.navbar-add {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+}
+.navbar-img {
+    padding-top: 27px;
+}
+.navbar-row {
+    padding: '2%';
+}
+.navbar-title {
+    font-size: 4rem;
+    color: #dbe2ef;
+}
+
+
