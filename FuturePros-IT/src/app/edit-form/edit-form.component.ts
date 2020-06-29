@@ -19,7 +19,6 @@ export class EditFormComponent implements OnInit {
 
   ngOnInit() {
     this.getAllPlates();
-    console.log('data to show in ng', this.dataToShow);
   }
   getAllPlates(){
     this.id = this.activeRoute.snapshot.paramMap.get('id');
