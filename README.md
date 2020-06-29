@@ -41,3 +41,27 @@ Open up your browser and head over to:
 http://localhost:3700/api/plates
 
 You should see the list of car plates. That confirms that you have set up everything successfully.
+
+# Frontend setup
+
+Make sure to follow all these steps exactly as explained below.
+
+### Setup Angular
+
+To install Angular on your local system, you need to have Node.js and npm package manager. If you don't have it yet, click on the link below: 
+
+https://nodejs.org/en/download/
+
+#### Install the Angular CLI
+
+	npm install -g @angular/cli
+
+Angular CLI is used to create projects, generate application and library code, and perform a variety of ongoing development tasks.
+
+### Clone this repository
+
+Then, setup backend as it is shown above and after that go to FuturePros-IT directory and run command
+
+	ng serve --open
+
+
