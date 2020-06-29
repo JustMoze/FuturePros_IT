@@ -8,13 +8,30 @@ router.get('/', async(req, res) => {
     const carPlates = await CarPlate.find().select('-').sort('number');
     res.send(carPlates);
 });
+router.get('/:id', async(req, res) => {
+    console.log('got id -> ', req.params.id);
+    try {
+        var carPlate = {};
+        await CarPlate.findById(req.params.id, function (err, plate){
+            if(!err){
+                carPlate = plate;
+            } else {
+                console.log('error occured ->', err);
+            }
+        });
+        console.log('got by an ID', carPlate);
+        if(carPlate){
+            res.send(carPlate);
+        } else throw 'Car plate whit this ID does not exists!';
+    } catch (error) {
+        res.send(error.message);
+    }
+});
 router.post('/', async(req, res) => {
     const {error} = validate(req.body);
     if(error) return res.status(400).send(error.details[0].message);
     try {
-        console.log('as cia');
         var plateNumber = req.body.number;
-        var ownerName = req.body.owner;
         let plate = await CarPlate.findOne({number: plateNumber});
         if(plate){
             return res.status(400).send('Car plate with this number already exists');
@@ -27,7 +44,6 @@ router.post('/', async(req, res) => {
     }
 });
 router.delete('/:id', async(req, res) => {
-    console.log('params -> ', req.params);
     let id = req.params.id;
     console.log(`Car plate delete route: ID -> ${id} and req -> ${req}`);
     if(id){

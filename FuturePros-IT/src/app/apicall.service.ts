@@ -1,3 +1,4 @@
+import { IPlate } from './IPlate';
 import { Plates } from './plates';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -21,7 +22,6 @@ export class ApicallService {
            })
         )
   }
-
   addPlate(number, owner){
     return this.httpClient.post(this.ROOT_URL, {
       'number': number,

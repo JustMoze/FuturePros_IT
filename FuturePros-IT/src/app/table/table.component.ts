@@ -59,7 +59,9 @@ export class TableComponent implements OnInit {
     this.router.navigateByUrl('/Refresh', {skipLocationChange:true}).then(() => {
       this.router.navigate([decodeURI(this.location.path())]);
     })
-
+  }
+  handleEdit(id){
+    this.router.navigate(['/Plates', id]);
   }
   cancelDelete(){
     this.showSnackbar = false;

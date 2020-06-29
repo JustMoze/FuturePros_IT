@@ -16,6 +16,7 @@ import { TableComponent } from './table/table.component';
 import { CreateFormComponent } from './create-form/create-form.component';
 import { HomeComponent } from './home/home.component';
 import { RefreshComponent } from './refresh/refresh.component';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RefreshComponent } from './refresh/refresh.component';
     TableComponent,
     CreateFormComponent,
     HomeComponent,
-    RefreshComponent
+    RefreshComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,
